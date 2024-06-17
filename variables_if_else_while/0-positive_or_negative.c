@@ -2,7 +2,15 @@
 #include <time.h>
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Description: Generates a random number, then prints whether
+ * the number stored in the variable n is positive, zero, or negative.
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	int n;
