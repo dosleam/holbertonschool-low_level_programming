@@ -19,19 +19,18 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	
-		
+
 		if (last_digit > 5)
 		{
-			printf("%d and is greather than 5\n");
+			printf("and is greather than 5\n");
 		}
 		else if (last_digit == 0)
 		{
-			printf("%d and is 0\n");
+			printf("and is 0\n");
 		}
 		else
 		{
-			printf("%d and is less than 6 and not 0\n");
+			printf("and is less than 6 and not 0\n");
 		}
 	return (0);
 }
