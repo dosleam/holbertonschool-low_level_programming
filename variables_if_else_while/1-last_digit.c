@@ -20,7 +20,6 @@ int main(void)
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	
-	last_digit = n % 10; // Calcul du dernier chiffre de n
 
 	printf("Last digit of %d is %d ", n, last_digit);
 		
