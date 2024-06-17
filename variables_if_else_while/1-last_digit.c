@@ -2,7 +2,16 @@
 #include <time.h>
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
+/**
+ * main - Entry point
+ *
+ * Description: Generates a random number, then prints the last digit of
+ * the number stored in the variable n, along with additional information
+ * about this last digit.
+ *
+ * Return: Always 0 (Success)
+ */
+
 int main(void)
 {
 	int n;
