@@ -1,19 +1,19 @@
 #include <stdio.h>
 
 /**
+ *
  * main - Write a program that prints all single digit
  *
- * Return: 0
+ * return 0
  */
+
 int main(void)
 {
-        int numero;
+	int num;
 
-        for (numero = 48; numero <= 57; numero++)
-                putchar(numero);
+	for (num = 48; num <= 57; num++)
+		putchar(num)
 
-        putchar('\n');
-        return (0);
+	putchar('\n');
+	return (0);
 }
-~                                                                                                                                                                                                                 
-~                               n
