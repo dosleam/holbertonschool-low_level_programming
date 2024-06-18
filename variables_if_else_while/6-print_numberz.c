@@ -1,14 +1,12 @@
 #include <stdio.h>
 
 /**
- * Main - Entry point
- *
  * main - Write a program that prints all single digit
  *
- * return: 0
+ * Return: 0
  */
 
-int main()
+int main(void)
 {
 	int num;
 
