@@ -3,7 +3,7 @@
 /**
  * main - check the code
  * print_alphabet - Imprime l'alphabet en minuscules suivi d'une nouvelle ligne
- * print_alphabet_x10 - Imprime 10 fois l'alphabet en minuscules, chaque alphabet étant suivi d'une nouvelle ligne
+ * print_alphabet_x10 - Imprime 10 fois l'alphabet en minuscules
  * Return: 0
  */
 
