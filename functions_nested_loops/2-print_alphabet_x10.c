@@ -2,7 +2,9 @@
 
 /**
  * main - check the code
- * print_alphabet_x10 - Imprime 10 fois l'alphabet en minuscules
+ *
+ * print_alphabet_x10 - Ecris l'alphabet en minuscule x10
+ *
  * Return: 0
  */
 
