@@ -6,14 +6,16 @@
  * Return: 0
  */
 
-int _abs(int)
+int _abs(int r)
 {
-	int r;
+	if (r < 0)
 	{
-		if (r < 0)
-		
-			printf("%d\n", r);
-		return (1);
+		n = (-1) * n;
+		return (n);
+	}
+	if (n > 0)
+	{
+		return (n);
 	}
 	else
 	{
