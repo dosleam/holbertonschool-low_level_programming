@@ -16,13 +16,15 @@ void jack_bauer(void)
 	for (h1 = '0'; h1 <= '2'; h1++);
 		{
 			for (h1 = '0' &&  h2 <= 9; h2++)
-			}
+			
 		{
 			for (m1 = '0'; m1 <= '5'; m1++)
-			}
+				
+				if ((h1 <= '1' && h2 <= '9') || (m1 == '2' && m2 <= '3'))
+			
 		{
-			for (m1 = '0' && m2 <= '9'; m2++)
-			}
+			for (m1 = '0' && m2 <= '3'; m2++)
+			
 
 		{
 			_putchar(h1);
@@ -32,4 +34,7 @@ void jack_bauer(void)
 			_putchar(m2);
 			_putchar(\n);
 			}
+		}
+	}
+}
 }
