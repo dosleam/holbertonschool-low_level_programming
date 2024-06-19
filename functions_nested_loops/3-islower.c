@@ -2,7 +2,7 @@
 
 /**
  * islower - checks for lowercase character
- *
+ * c - variable functions
  * Return: 0
  */
 
