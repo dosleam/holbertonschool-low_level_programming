@@ -2,8 +2,8 @@
 
 /**
  * main - check the code
- * print_alphabet - print : alphabet
- * print_alphabet_x10 - print : alphabet x10
+ * print_alphabet - Imprime l'alphabet en minuscules suivi d'une nouvelle ligne
+ * print_alphabet_x10 - Imprime 10 fois l'alphabet en minuscules, chaque alphabet étant suivi d'une nouvelle ligne
  * Return: 0
  */
 
