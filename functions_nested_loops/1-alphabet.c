@@ -1,7 +1,8 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * Print_alphabet : check the code
+ * print_alphabet - check the code
  *
  * Return: 0
  */
@@ -15,6 +16,7 @@ void print_alphabet(void)
 		_putchar(alphabet);
 		alphabet++;
 	}
+
 	_putchar('\n');
 	return (0);
 }
