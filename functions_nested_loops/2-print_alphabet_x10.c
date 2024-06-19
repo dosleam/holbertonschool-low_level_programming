@@ -2,6 +2,7 @@
 
 /**
  * main - check the code
+ * print_alphabet - print : alphabet
  * print_alphabet_x10 - print : alphabet x10
  * Return: 0
  */
