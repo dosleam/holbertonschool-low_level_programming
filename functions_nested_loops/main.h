@@ -1,10 +1,6 @@
-#include "main.h"
+#ifndef "main.h"
+#define "main.h"
 
-/**
- *
- * main - check the code
- *
- * Return: Always 0
- */
+int putchar(char c);
 
-void print_alphabet(void);
+#endif "main.h"
