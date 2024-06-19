@@ -1,7 +1,6 @@
 #include "main.h"
 
 /**
- *
  * print_alphabet_x10 - Ecris l'alphabet en minuscule x10
  *
  * Return: 0
