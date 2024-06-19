@@ -6,9 +6,9 @@
  * Return: 0
  */
 
-int _abs(int r)
+int _abs(int n)
 {
-	if (r < 0)
+	if (n < 0)
 	{
 		n = (-1) * n;
 		return (n);
@@ -18,7 +18,5 @@ int _abs(int r)
 		return (n);
 	}
 	else
-	{
 		return (0);
-	}
 }
