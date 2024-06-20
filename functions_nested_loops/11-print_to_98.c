@@ -13,15 +13,15 @@ void print_to_98(int n)
 	{
 		if (n < 98)
 		{
-			_putchar("%d, ", n);
+			printf("%d, ", n);
 			n--;
 		}
 		else
 		{
-			_putchar("%d, ", n);
+			printf("%d, ", n);
 			n++;
 		}
 	}
-	_putchar(98)
-	_putchar("\n");
+	printf(98)
+	printf("\n");
 }	
