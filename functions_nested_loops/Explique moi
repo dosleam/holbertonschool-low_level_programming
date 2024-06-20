@@ -86,7 +86,7 @@ Task 3 : 4-isalpha.c
 /**                                                                // 
  * _isalpha - check if a character is lowercase or uppercase       // Ceci est un commentaire de documentation (ou docstring) pour la fonction _isalpha. Il indique que cette fonction vérifie si un caractère est en minuscule ou en majuscule. 
  * @c: the character to be checked                                 // @c: the character to be checked spécifie que c est le caractère à vérifier. 
- * Return: 1 if c is lowercase, 2 if c is uppercase, 0 otherwise   // Return: 1 if c is lowercase, 2 if c is uppercase, 0 otherwise décrit les valeurs de retour de la fonction,
+ * Return: 1 if c is lowercase, 2 if c is uppercase, 0 otherwise   // décrit les valeurs de retour de la fonction,
  */                                                                // La fonction retourne 1 si le caractère est une lettre (minuscule ou majuscule) et 0 sinon.
 
 int _isalpha(int c)                                                // définition de la fonction _isalpha. La fonction retourne un entier (int) et prend un argument entier (int c) qui représente le caractère à vérifier.
