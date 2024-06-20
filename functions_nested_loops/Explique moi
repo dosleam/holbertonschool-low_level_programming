@@ -23,6 +23,8 @@ int main(void)                  // définition de la fonction main. La fonction 
 
 	return (0);                  // Cette ligne fait que la fonction main retourne 0, ce qui est une indication standard que le programme s'est terminé avec succès.
 }
+En résumé, ce programme imprime la chaîne "_putchar" suivie d'un saut de ligne, 
+en utilisant la fonction _putchar pour chaque caractère, et se termine en retournant 0.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Task 1 : 1-alphabet.c
 
@@ -48,8 +50,9 @@ void print_alphabet(void)                  // définition de la fonction print_a
 
         _putchar('\n');                  // appelle la fonction _putchar pour imprimer un saut de ligne (\n), ce qui permet de passer à la ligne suivante après avoir imprimé l'alphabet.
 }
+En résumé, cette fonction imprime toutes les lettres de l'alphabet en minuscule, de 'a' à 'z', 
+chacune suivie d'un saut de ligne. La fonction utilise _putchar pour imprimer chaque caractère.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
 Task 2 : 2-print_alphabet_x10.c
 
 #include "main.h"                                                // Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
@@ -77,9 +80,32 @@ void print_alphabet_x10(void)                                    // définition 
         }
 
 }
+En résumé, cette fonction imprime l'alphabet en minuscules 10 fois, chaque alphabet étant suivi d'un saut de ligne. 
+La fonction utilise une boucle for pour répéter l'opération 10 fois, 
+et à chaque itération de la boucle for, une boucle while est utilisée pour imprimer chaque lettre de l'alphabet. 
+La fonction _putchar est utilisée pour imprimer chaque caractère.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 3 : 3-islower.c
 
-Task 3 : 4-isalpha.c
+#include "main.h"						// Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+
+/**								// Ceci est un commentaire de documentation.
+ * _islower - checks if a character is lowercase		// Il explique ce que fait la fonction _islower
+ * @c:  the character to be checked				// le paramètre qu'elle prend (c),
+ * Return: 1 if c is lowercase, 0 otherwise			// et ce qu'elle retourne (1 si c est une lettre minuscule, 0 sinon).
+ */								//
+
+int _islower(int c)						// définit une fonction appelée _islower qui prend un argument c de type int et retourne un entier.
+{
+        if (c >= 'a' && c <= 'z')				// vérifie si la valeur de c se situe entre les codes ASCII des caractères 'a' et 'z' inclusivement. En ASCII, les lettres minuscules vont de 97 ('a') à 122 ('z').
+                return (1);					// Si la condition est vraie, c'est-à-dire si c est une lettre minuscule, la fonction retourne 1.
+        else							// Si la condition est fausse, c'est-à-dire si c n'est pas une lettre minuscule, 
+                return (0);					// la fonction retourne 0.
+}
+En résumé, la fonction _islower vérifie si un caractère est une lettre minuscule en comparant sa valeur avec les valeurs ASCII des lettres minuscules.
+Si c'est le cas, elle retourne 1, sinon elle retourne 0.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 4 : 4-isalpha.c
 
 #include "main.h"                                                  // Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
 
@@ -98,4 +124,140 @@ int _isalpha(int c)                                                // définitio
         else                                                       // Si c n'est ni une lettre minuscule ni une lettre majuscule,
                 return (0);                                        // la fonction retourne 0.
 }
+En résumé, cette fonction vérifie si un caractère est une lettre de l'alphabet (minuscule ou majuscule). 
+Elle retourne 1 si le caractère est une lettre, et 0 sinon.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+task 5 : 5-sign.c
+
+#include "main.h"						// Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+
+/**								//
+ * print_sign - prints the sign of a number			// explique ce que fait la fonction print_sign
+ * @n: the number as be checked					// le paramètre qu'elle prend (n)
+ * Return: 1 if n > 0, -1 if n < 0, 0 if n = 0			// et ce qu'elle retourne : 1 si n est positif, -1 si n est negatif, 0 si n est nul
+ */								//
+
+int print_sign(int n)						// définit une fonction appelée print_sign qui prend un argument n de type int et retourne un entier.
+{
+        if (n > 0)						// vérifie si la valeur de n est supérieure à 0.
+
+
+        {
+                _putchar('+');					// Si la condition est vraie (c'est-à-dire si n est positif), cette ligne appelle la fonction _putchar pour imprimer le signe '+'.
+                return (1);					// La fonction retourne ensuite 1.
+        }
+        else if (n < 0)						// vérifie si la valeur de n est inférieure à 0.
+        {
+                _putchar('-');					// Si la condition est vraie (c'est-à-dire si n est négatif), cette ligne appelle la fonction _putchar pour imprimer le signe '-'.
+                return (-1);					// La fonction retourne ensuite -1.
+        }
+        else							// Si aucune des conditions précédentes n'est vraie, cela signifie que n est égal à 0.
+        {
+                _putchar('0');					// _putchar('0'); : Cette ligne appelle la fonction _putchar pour imprimer le caractère '0'.
+                return (0);					// La fonction retourne ensuite 0.
+        }
+}
+En résumé, la fonction print_sign imprime le signe d'un nombre (+ pour positif, - pour négatif, et 0 pour nul) 
+et retourne une valeur indiquant si le nombre est positif (1), négatif (-1) ou nul (0).
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 6 : 6-abs.c
+
+#include "main.h"						// Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+
+/**								//
+ * _abs - computes the absolute value of an integer		// explique ce que fait la fonction _abs
+ * @n: the integer whose absolute value is required		// le paramètre qu'elle prend (n),
+ * Return: 0							// et ce qu'elle retourne (la valeur absolue de n).
+ */								//
+
+int _abs(int n)							// définit une fonction appelée _abs qui prend un argument n de type int et retourne un entier.
+{
+        if (n < 0)						// vérifie si la valeur de n est inférieure à 0.
+        {
+                n = (-1) * n;					// Si la condition est vraie (c'est-à-dire si n est négatif), cette ligne multiplie n par -1 pour obtenir sa valeur positive.
+                return (n);					// La fonction retourne ensuite cette nouvelle valeur de n.
+        }
+        if (n > 0)						// vérifie si la valeur de n est supérieure à 0.
+        {
+                return (n);					// Si la condition est vraie (c'est-à-dire si n est positif), la fonction retourne n.
+
+        }
+        else							// Si aucune des conditions précédentes n'est vraie, cela signifie que n est égal à 0.
+                return (0);					// La fonction retourne 0.
+}
+En résumé, la fonction _abs calcule la valeur absolue d'un entier en vérifiant si l'entier est négatif, positif ou nul, 
+et en retournant la valeur appropriée. 
+Si l'entier est négatif, il est multiplié par -1 pour obtenir sa valeur absolue positive. 
+Si l'entier est positif ou nul, il est retourné tel quel.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 7 : 7-print_last_digit.c
+
+#include "main.h"						// Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+
+/**								//
+ * print_last_digit - print the last digit of a number		// explique ce que fait la fonction print_last_digit
+ * @n: the character checked					// le paramètre qu'elle prend (n),
+ * Return: 0							// et ce qu'elle retourne (la valeur du dernier chiffre de n).
+ */								//
+
+int print_last_digit(int n)					// définit une fonction appelée print_last_digit qui prend un argument n de type int et retourne un entier.
+{
+        int last_digit = n % 10;				// calcule le reste de la division de n par 10, ce qui donne le dernier chiffre de n. Le résultat est stocké dans la variable last_digit.
+
+        if (last_digit < 0)					// Cette condition vérifie si last_digit est négatif.
+                last_digit *= -1;				// Si la condition est vraie (c'est-à-dire si last_digit est négatif), cette ligne multiplie last_digit par -1 pour obtenir sa valeur positive.
+
+        _putchar(last_digit + '0');				// appelle la fonction _putchar pour imprimer le caractère correspondant à last_digit. Le '0' ajouté à last_digit convertit le chiffre en son équivalent caractère ASCII.
+
+        return (last_digit);					// La fonction retourne ensuite la valeur de last_digit.
+}
+En résumé, la fonction print_last_digit calcule le dernier chiffre d'un nombre en utilisant l'opérateur modulo (%), 
+le convertit en une valeur positive si nécessaire, 
+l'imprime en tant que caractère, 
+et retourne la valeur du dernier chiffre.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 8 : 8-jack_bauer.c
+
+#include "main.h"									// Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+
+/**											//
+ * jack_bauer - prints every minute of the day of Jack Bauer				// explique ce que fait la fonction jack_bauer
+ * starting from 00:00 to 23:59								// imprimer chaque minute de la journée
+ *											//
+ * Return: Always 0									// indique que la fonction ne retourne rien puisqu'elle est de type void.
+ */											//
+
+void jack_bauer(void)									// définit une fonction appelée jack_bauer qui ne prend aucun argument et ne retourne aucune valeur (type void).
+{
+        int h1;										//
+        int h2;										// Ces lignes déclarent quatre variables de type int qui seront utilisées
+        int m1;										// pour représenter les chiffres des heures (h1 et h2) et des minutes (m1 et m2).
+        int m2;										//
+
+        for (h1 = '0'; h1 <= '2'; h1++)							// Cette boucle parcourt les valeurs des dizaines d'heures de '0' à '2'. Chaque valeur de h1 représente un chiffre des dizaines d'heures.
+        {
+                for (h2 = '0'; h2 <= '9'; h2++)						// Cette boucle parcourt les valeurs des unités d'heures de '0' à '9'. Chaque combinaison de h1 et h2 représente une heure (par exemple, 00:00, 01:00, ..., 23:00).
+                {
+                        if ((h1 <= '1' && h2 <= '9') || (h1 == '2' && h2 <= '3'))	// Cette condition vérifie si la combinaison h1 et h2 représente une heure valide entre 00:00 et 23:59. Si h1 est '0' ou '1', alors h2 peut être n'importe quel chiffre de '0' à '9'. Si h1 est '2', alors h2 peut aller de '0' à '3' (pour limiter les heures à 23).
+                        {
+                                for (m1 = '0'; m1 <= '5'; m1++)				// Cette boucle parcourt les dizaines de minutes de '0' à '5'.
+                                {							// Ensemble, elles génèrent toutes les combinaisons possibles de minutes de '00' à '59'.
+                                        for (m2 = '0'; m2 <= '9'; m2++)			// Cette boucle parcourt les unités de minutes de '0' à '9'.
+                                        {
+                                                _putchar(h1);				//
+                                                _putchar(h2);				//
+                                                _putchar(':');				// Ces lignes utilisent la fonction _putchar pour imprimer chaque chiffre de l'heure au format HH
+                                                _putchar(m1);				// suivi d'un saut de ligne ('\n').
+                                                _putchar(m2);				//
+                                                _putchar('\n');				//
+                                        }
+                                }
+                        }
+                }
+        }
+}
+En résumé, la fonction jack_bauer utilise des boucles imbriquées pour générer et imprimer toutes les minutes de la journée de 00:00 à 23:59 au format HH
+Elle vérifie également que les heures générées restent dans les limites valides d'une journée (de 00:00 à 23:59). 
+Chaque boucle gère un segment différent de l'heure (dizaines et unités d'heures, dizaines et unités de minutes), 
+assurant ainsi une couverture complète de toutes les combinaisons possibles.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
