@@ -19,7 +19,7 @@ void times_table(void)
 
 					a = num1 * num2;
 
-					if (num2 == '0')
+					if (num2 == 0)
 					{
 						_putchar(a * '0');
 					}
