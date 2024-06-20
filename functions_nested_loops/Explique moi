@@ -1,0 +1,101 @@
+Task 0 : 0-putchar.c
+
+#include "main.h"               // Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+
+/**                             //
+ * main - Print : _putchar      //
+ *                              // commentaire de documentation (ou docstring) pour la fonction main. Il décrit brièvement ce que fait la fonction.
+ *                              // 
+ * Return: 0                    // 
+ */                             //
+
+int main(void)                  // définition de la fonction main. La fonction main est le point d'entrée de tout programme C. Elle ne prend pas d'arguments (d'où le void dans les parenthèses) et retourne un entier (int).
+{
+	_putchar('_');                //
+	_putchar('p');                //
+	_putchar('u');                //
+	_putchar('t');                //
+	_putchar('c');                // Ces lignes appellent la fonction _putchar plusieurs fois pour imprimer chaque caractère de la chaîne "_putchar",suivi d'un saut de ligne (\n). 
+	_putchar('h');                //
+	_putchar('a');                //
+	_putchar('r');                //
+	_putchar('\n');              //
+
+	return (0);                  // Cette ligne fait que la fonction main retourne 0, ce qui est une indication standard que le programme s'est terminé avec succès.
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 1 : 1-alphabet.c
+
+#include "main.h"
+#include <stdio.h>              // Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso. stdio.h est une bibliothèque standard.
+
+/**                                         //
+ * print_alphabet - print : alphabet        //
+ * main - check the code                    // Ceci est un commentaire de documentation (ou docstring) pour la fonction print_alphabet. 
+ *                                          //
+ * Return: 0                                //
+ */
+
+void print_alphabet(void)                  // définition de la fonction print_alphabet. La fonction ne retourne aucune valeur (void) et ne prend pas d'arguments.
+{
+        char alphabet = 'a';              // déclare une variable de type char nommée alphabet et l'initialise avec la valeur 'a'.
+
+        while (alphabet <= 'z')           // initie une boucle while qui s'exécutera tant que la valeur de alphabet est inférieure ou égale à 'z'.
+        {
+                _putchar(alphabet);      // Ces lignes appellent la fonction _putchar pour imprimer le caractère actuel de alphabet
+                alphabet++;              // puis incrémentent alphabet de 1 "++" pour passer au caractère suivant dans l'alphabet.
+        }
+
+        _putchar('\n');                  // appelle la fonction _putchar pour imprimer un saut de ligne (\n), ce qui permet de passer à la ligne suivante après avoir imprimé l'alphabet.
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task 2 : 2-print_alphabet_x10.c
+
+#include "main.h"                                                // Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+
+/**                                                              //
+ * print_alphabet_x10 - Ecris l'alphabet en minuscule x10        //
+ *                                                               // Ceci est un commentaire de documentation (ou docstring) pour la fonction print_alphabet_x10. Il indique que cette fonction écrit l'alphabet en minuscules 10 fois.
+ * Return: 0                                                     //
+ */                                                              //
+
+void print_alphabet_x10(void)                                    // définition de la fonction print_alphabet_x10. La fonction ne retourne aucune valeur (void) et ne prend pas d'arguments.
+{
+        int r;                                                   // Ces lignes déclarent deux variables. r est une variable de type int utilisée comme compteur pour la boucle for,
+        char alphabet;                                           // et alphabet est une variable de type char utilisée pour stocker les caractères de l'alphabet.
+
+        for (r = 0; r < 10; r++)                                 // initie une boucle for qui s'exécutera 10 fois. La variable r commence à 0 et est incrémentée de 1 à chaque itération jusqu'à ce qu'elle atteigne 10.
+        {
+                alphabet = 'a';                                  // À chaque itération de la boucle for, la variable alphabet est réinitialisée à 'a'.
+                while (alphabet <= 'z')                          // initie une boucle while qui s'exécutera tant que la valeur de alphabet est inférieure ou égale à 'z'.
+                {
+                        _putchar(alphabet);                      // appellent la fonction _putchar pour imprimer le caractère actuel de alphabet
+                        alphabet++;                              // puis incrémentent alphabet de 1 pour passer au caractère suivant dans l'alphabet.
+                }
+                _putchar('\n');                                  // appelle la fonction _putchar pour imprimer un saut de ligne (\n), ce qui permet de passer à la ligne suivante après avoir imprimé l'alphabet.
+        }
+
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task 3 : 4-isalpha.c
+
+#include "main.h"                                                  // Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+
+/**                                                                // 
+ * _isalpha - check if a character is lowercase or uppercase       // Ceci est un commentaire de documentation (ou docstring) pour la fonction _isalpha. Il indique que cette fonction vérifie si un caractère est en minuscule ou en majuscule. 
+ * @c: the character to be checked                                 // @c: the character to be checked spécifie que c est le caractère à vérifier. 
+ * Return: 1 if c is lowercase, 2 if c is uppercase, 0 otherwise   // Return: 1 if c is lowercase, 2 if c is uppercase, 0 otherwise décrit les valeurs de retour de la fonction,
+ */                                                                // La fonction retourne 1 si le caractère est une lettre (minuscule ou majuscule) et 0 sinon.
+
+int _isalpha(int c)                                                // définition de la fonction _isalpha. La fonction retourne un entier (int) et prend un argument entier (int c) qui représente le caractère à vérifier.
+{
+        if (c >= 'a' && c <= 'z')                                  // Cette ligne vérifie si le caractère c est une lettre minuscule.
+                return (1);                                        // Si c est compris entre 'a' et 'z' inclusivement, la fonction retourne 1.
+        else if (c >= 'A' && c <= 'Z')                             // Cette ligne vérifie si le caractère c est une lettre majuscule.
+                return (1);                                        // Si c est compris entre 'A' et 'Z' inclusivement, la fonction retourne 1.
+        else                                                       // Si c n'est ni une lettre minuscule ni une lettre majuscule,
+                return (0);                                        // la fonction retourne 0.
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
