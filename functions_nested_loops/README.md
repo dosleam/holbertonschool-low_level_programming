@@ -10,3 +10,5 @@ Task 8 : imprime chaque minute de la journée de 00:00 à 23:59
 Task 9 : imprime la table des 9 fois, en commençant par 0.
 Task 10 : fonction qui additionne deux entiers et renvoie le résultat.
 Task 11 : fonction qui imprime tous les nombres naturels de n à 98, suivis d'une nouvelle ligne.
+
+Le fichier "explique moi" decris chaque ligne de code de chaque task de ce projet.
