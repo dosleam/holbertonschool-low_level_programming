@@ -261,3 +261,114 @@ Elle vérifie également que les heures générées restent dans les limites val
 Chaque boucle gère un segment différent de l'heure (dizaines et unités d'heures, dizaines et unités de minutes), 
 assurant ainsi une couverture complète de toutes les combinaisons possibles.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 9 : 9-times_table.c
+
+#include "main.h"									// Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+
+/**											//
+ * times_table - print the 9 times table						//  indique que la fonction times_table
+ * starting with 0									// imprime la table de multiplication de 9, en commençant par 0.
+ *											//
+ */											//
+
+void times_table(void)									// La fonction times_table ne prend aucun argument (void) et ne retourne rien (void).
+{
+        int num1;									// Les variables num1 et num2 sont 
+        int num2;									// utilisées pour les deux facteurs dans les multiplications.
+
+                for (num1 = 0; num1 <= 9; num1++)					// Cette boucle extérieure parcourt les valeurs de num1 de 0 à 9, représentant les lignes de la table de multiplication.
+                {
+                        for (num2 = 0; num2 <= 9; num2++)				// Cette boucle intérieure parcourt les valeurs de num2 de 0 à 9, représentant les colonnes de la table de multiplication.
+                        {
+                                int a;							// La variable a est le produit de num1 et num2.
+
+                                        a = num1 * num2;				// La variable a est le produit de num1 et num2.
+
+                                        if (num2 == 0)					// Si num2 est 0, cela signifie que c'est le premier élément de la ligne. Il est affiché sans virgule ni espace. 
+                                        {
+                                                _putchar(a + '0');			// L'expression a + '0' convertit l'entier a en son caractère ASCII correspondant. Par exemple, si a vaut 5, 5 + '0' devient le caractère '5'.
+                                        }
+                                        else if (a <= 9)				// Si le produit est un seul chiffre, une virgule et deux espaces sont imprimés avant le chiffre pour maintenir l'alignement
+                                        {
+                                                _putchar(',');				// 
+                                                _putchar(' ');				// Par exemple, si a vaut 7, le programme affiche , 7.
+                                                _putchar(' ');				// Par exemple, si a vaut 5, le programme affiche , 5.
+                                                _putchar(a + '0');			//
+                                        }
+                                        else						// Si le produit a deux chiffres, une virgule et un espace sont imprimés, puis les deux chiffres du produit sont affichés séparément. 
+                                        {
+                                                _putchar(',');				//
+                                                _putchar(' ');				//  Par exemple, si a vaut 12, 12 / 10 donne 1 et 12 % 10 donne 2, donc le programme affiche , 12.
+                                                _putchar(a / 10 + '0');			//  Par exemple, si a vaut 12, 12 / 10 donne 1 et 12 % 10 donne 2, donc le programme affiche , 12.
+                                                _putchar(a % 10 + '0');			//
+                                        }
+                        }
+                                        _putchar('\n');					// Cette ligne ajoute un retour à la ligne après avoir affiché une ligne complète de la table de multiplication, ce qui permet d'imprimer la prochaine ligne correctement.
+                }
+}
+Le programme affiche la table de multiplication de 9 en commençant par 0. 
+Chaque ligne commence par multiplier num1 par les valeurs de 0 à 9 (num2), puis affiche le produit formaté correctement, avec les nombres alignés. 
+Chaque ligne de produits est suivie d'un retour à la ligne pour passer à la ligne suivante.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 10 : 10-add.c
+
+#include "main.h"									// Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+	
+/**											//
+ * add - adds two integers								// explique que la fonction additionne deux entiers.
+ * @a: number 1										// indique que a est le premier nombre.
+ * @b: number 2										// indique que b est le deuxième nombre.
+ * Return: the sum of a and b								//
+ */											//
+
+int add(int a, int b)									// La fonction add prend deux entiers (int a et int b) comme paramètres et retourne un entier (int).
+{
+        int result = a + b;								// Cette ligne déclare une variable locale result et la initialise avec la somme de a et b.
+
+        return (result);								// La fonction retourne la valeur de result, qui est la somme de a et b.
+}
+Le but de cette fonction est simplement d'additionner deux nombres entiers et de retourner le résultat. 
+Voici un résumé de ce que fait chaque partie du code : 1: Inclusion de l'en-tête : Inclut le fichier d'en-tête main.h qui contient probablement des déclarations nécessaires pour ce programme.
+						       2: Commentaire de documentation : Décrit la fonction add, ses paramètres et ce qu'elle retourne.
+						       3: Déclaration de la fonction : Définit la fonction add qui prend deux entiers et retourne leur somme.
+						       4: Calcul du résultat : Additionne les deux entiers et stocke le résultat dans une variable locale result.
+						       5: Retourner le résultat : Retourne la somme des deux entiers.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Task 11 : 11-print_to_98
+
+#include "main.h"									// Ces lignes incluent les fichiers d'en-tête nécessaires pour ce programme. main.h est une bibliothèque perso.
+#include <stdio.h>									// Ce fichier d'en-tête standard est inclus pour pouvoir utiliser la fonction printf, qui permet d'afficher des informations à la console.
+
+/**											//
+ * print_to_98 - print all natural numbers from n to 98					// indique que la fonction imprime tous les nombres naturels de n à 98.
+ * @n: number check									// indique que n est le point de départ.
+ * Return: 0										// indique que return ne retourne rien
+ */											//
+
+void print_to_98(int n)									// La fonction print_to_98 prend un entier (int n) comme paramètre et ne retourne rien (void).
+{
+        while (n != 98)									// Cette boucle continue tant que n n'est pas égal à 98. Elle permet d'atteindre 98 à partir de n'importe quel nombre n.
+        {
+                if (n > 98)								// Si n est supérieur à 98, le programme imprime n
+                {
+                        printf("%d, ", n);						// suivi d'une virgule et d'un espace,
+                        n--;								// puis décrémente n de 1 (n--).
+                }
+                else									// Si n est inférieur à 98, le programme imprime n 
+                {
+                        printf("%d, ", n);						// suivi d'une virgule et d'un espace
+                        n++;								// puis incrémente n de 1 (n++).
+                }
+        }
+        printf("98");									// Une fois que la boucle while se termine (lorsque n est égal à 98)
+        printf("\n");									// le programme imprime 98 suivi d'un retour à la ligne (\n).
+}
+La fonction print_to_98 imprime tous les nombres naturels de n à 98 de manière ordonnée, que n soit initialement supérieur ou inférieur à 98.
+Voici un résumé de ce que fait chaque partie du code : 1: Inclusion des en-têtes : Inclut les fichiers d'en-tête nécessaires pour les déclarations de fonctions et l'utilisation de printf.
+						       2: Commentaire de documentation : Décrit la fonction print_to_98, son paramètre et ce qu'elle retourne.
+						       3: Déclaration de la fonction : Définit la fonction print_to_98 qui prend un entier et ne retourne rien.
+						       4: Boucle while : Continue tant que n n'est pas égal à 98.
+						       5: Condition if pour décrémenter : Si n est supérieur à 98, imprime n et décrémente n.
+						       6: Condition else pour incrémenter : Si n est inférieur à 98, imprime n et incrémente n.
+						       7: Impression de 98 : Imprime 98 une fois que n est égal à 98.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
