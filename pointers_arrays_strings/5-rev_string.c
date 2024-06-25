@@ -24,4 +24,3 @@ void rev_string(char *s)
 		s[c] = temp;
 	}
 }
-			
