@@ -4,6 +4,7 @@
  * _strncat - concatenates two string
  * @dest: string source
  * @src: string concatenates
+ * @n: octets of a string src
  * Return: dest
  */
 
