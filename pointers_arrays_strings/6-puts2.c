@@ -11,7 +11,7 @@ void puts2(char *str)
 	int c;
 	int a;
 
-	for (c = 0; str[c] != '0'; c++)
+	for (c = 0; str[c] != '\0'; c++)
 	{
 	}
 	for (a = 0; a < c; a += 2)
