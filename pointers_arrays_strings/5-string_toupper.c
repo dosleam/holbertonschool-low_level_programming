@@ -4,6 +4,7 @@
 /**
  * string_toupper - changes all lowercase letters of a string to uppercase.
  * @ptr: pointeur
+ * @str: pointeur
  * Return: str
  */
 
