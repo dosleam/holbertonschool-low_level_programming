@@ -4,9 +4,9 @@
 /**
  * *leet - function that encodes a string into 1337
  * @s: string checked
- *
  * Return: s
  */
+
 char *leet(char *s)
 {
 	int a;
