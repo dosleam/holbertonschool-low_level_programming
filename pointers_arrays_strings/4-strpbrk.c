@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * _strpbrk - 
- * @s: 
- * @accept: 
- * Return: 
+ * _strpbrk - searches a string for any of a set of bytes.
+ * @s: string
+ * @accept: string
+ * Return: NULL
  */
 
 char *_strpbrk(char *s, char *accept)
