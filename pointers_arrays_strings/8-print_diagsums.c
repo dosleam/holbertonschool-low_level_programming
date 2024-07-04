@@ -2,13 +2,13 @@
 #include <stdio.h>
 
 /**
- * print_diagsum -functions that prints the sum of the two diagonals
+ * print_diagsums -functions that prints the sum of the two diagonals
  * of a square matrix of integers
  * @a: array
  * @size: size array
  */
 
-void print_diagsum(int *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int sum1 = 0;
 	int sum2 = 0;
