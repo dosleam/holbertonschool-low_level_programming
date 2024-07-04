@@ -22,7 +22,7 @@ int a(int n, int i)
 /**
  * is_prime_number - function to print prime numbers
  * @n: integer
- * Return: IamPrime function values
+ * Return: a function values
  */
 
 int is_prime_number(int n)
