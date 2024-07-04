@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * IamPrime - Function to find prime numbers
+ * a - Function to find prime numbers
  * @i: first integer
  * @n: second integer
  * Return: 0 or 1
