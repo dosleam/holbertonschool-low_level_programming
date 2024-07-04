@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * puts_recursion - print a string, by a new line
+ * _print_rev_recursion - print a string, by a new line
  * @s: string
  */
 
