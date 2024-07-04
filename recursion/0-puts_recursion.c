@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * _print_rev_recursion - print a string, by a new line
+ * _puts_recursion - print a string, by a new line
  * @s: string
  */
 
-void _print_rev_recursion(char *s)
+void _puts_recursion(char *s)
 {
 	if (*s == '\0')
 	{
