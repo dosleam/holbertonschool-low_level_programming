@@ -4,15 +4,14 @@
 
 /**
  * main - adds positive numbers.
- * @argc: arguments
- * @argv: arguments
+ * @argc: arguments count
+ * @argv: arguments vector
  *
- * Return: 0 if no number is passed , Error if that are not digits or sum adds
+ * Return: 0 if no number is passed , Error if there are non-digit arguments
  */
 int main(int argc, char *argv[])
 {
-	int a;
-	int i;
+	int a, i;
 	int result = 0;
 	char *arg;
 
@@ -33,5 +32,6 @@ int main(int argc, char *argv[])
 		result += atoi(arg);
 	}
 	printf("%d\n", result);
+
 	return (0);
 }
