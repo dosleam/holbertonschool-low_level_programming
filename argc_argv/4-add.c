@@ -12,6 +12,7 @@
 int main(int argc, char *argv[])
 {
 	int a;
+	int i;
 	int result = 0;
 
 	if (argc < 2)
@@ -19,8 +20,8 @@ int main(int argc, char *argv[])
 	for (a = 1; a < argc; a++)
 	{
 		char *arg = argv[a];
-		
-		for (int i = 0; arg[i] != '\0'; i++)
+
+		for (i = 0; arg[i] != '\0'; i++)
 		{
 			if (!isdigit(arg[i]))
 			{
