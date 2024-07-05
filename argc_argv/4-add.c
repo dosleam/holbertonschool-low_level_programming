@@ -14,12 +14,13 @@ int main(int argc, char *argv[])
 	int a;
 	int i;
 	int result = 0;
+	char *arg;
 
 	if (argc < 2)
 		return (0);
 	for (a = 1; a < argc; a++)
 	{
-		char *arg = argv[a];
+		arg = argv[a];
 
 		for (i = 0; arg[i] != '\0'; i++)
 		{
