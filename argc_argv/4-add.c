@@ -13,18 +13,22 @@ int main(int argc, char *argv[])
 	int a;
 	int result = 0;
 
-	if (argc < 1)
+	if (argc < 2)
 		return (0);
 	for (a = 1; a < argc; a++)
 	{
-		if (!atoi(argv[a]))
+		char *arg = argv[a];
+		
+		for (int i = 0; arg[i] != '\0'; i++)
 		{
-			printf("Error\n");
+			if (!isdigit(arg[i]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		result = result + atoi(argv[a]);
+		result += atoi(arg);
 	}
 	printf("%d\n", result);
-
 	return (0);
-
 }
