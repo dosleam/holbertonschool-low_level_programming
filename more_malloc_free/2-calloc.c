@@ -26,8 +26,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-
-	memset(ptr, 0, total);
-
+	
+	for (total = 0; total < nmemb * size; total++)
+	{
+		ptr[total] = '\0';
+	}
+	
 	return (ptr);
 }
