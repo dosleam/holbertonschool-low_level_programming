@@ -1,18 +1,21 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * str_concat - concatenates two strings
- * @s1: first string
- * @s2: second string
- * Return: a pointer to a separate space in memory
- * containing the contents of s1 followed by the contents of s2, and null terminated.
- * Returns NULL on failure
+ * *str_concat - function concat two string
+ * @s1: string 1
+ * @s2: string 2
+ * Return: 0 or NULL
  */
 
 char *str_concat(char *s1, char *s2)
 {
-	char *concat_str;
-	unsigned int i, j, l1, l2;
+	char *t;
+	int i = 0;
+	int l1;
+	int l2;
+	int sum = 0;
 
 	if (s1 == NULL)
 	{
@@ -22,30 +25,28 @@ char *str_concat(char *s1, char *s2)
 	{
 		s2 = "";
 	}
-
 	for (l1 = 0; s1[l1] != '\0'; l1++)
-		;
+	{
+	}
 	for (l2 = 0; s2[l2] != '\0'; l2++)
-		;
-
-	concat_str = (char *)malloc(sizeof(char) * (l1 + l2 + 1));
-
-	if (concat_str == NULL)
+	{
+	}
+	sum = sum + l1 + l2 + 1;
+	t = malloc(sizeof(char) * sum);
+	if (t == 0)
 	{
 		return (NULL);
 	}
-
-	for (i = 0; i < l1; i++)
+	for (l1 = 0; s1[l1] != '\0'; l1++)
 	{
-		concat_str[i] = s1[i];
+		t[i] = s1[l1];
+		i++;
 	}
-
-	for (j = 0; j < l2; j++)
+	for (l2 = 0; s2[l2] != '\0'; l2++)
 	{
-		concat_str[i + j] = s2[j];
+		t[i] = s2[l2];
+		i++;
 	}
-
-	concat_str[i + j] = '\0';
-
-	return (concat_str);
+	t[i + 1] = '\0';
+	return (t);
 }
