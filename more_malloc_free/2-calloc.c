@@ -29,11 +29,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	
+
 	for (total = 0; total < nmemb * size; total++)
 	{
 		ptr[total] = '\0';
 	}
-	
+
 	return (ptr);
 }
