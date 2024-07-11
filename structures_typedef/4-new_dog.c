@@ -1,21 +1,23 @@
+#include <stdio.h>
 #include "dog.h"
 
 /**
- * *new_dog - creates a new dog
- * @name: name of dog
- * @age: age of dog
- * @owner: owner of dog
- * Return: Dog
+ * *new_dog - function that creates a new dog
+ * @name: name a dog
+ * @age: age a dog
+ * @owner: owner a dog
+ *
+ * Return: Doggy
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *Dog;
+	dog_t *Doggy;
 	int cptname = 0;
 	int cptowner = 0;
 	int cpt;
 
-	Dog = malloc(sizeof(dog_t));
-	if (Dog == NULL)
+	Doggy = malloc(sizeof(dog_t));
+	if (Doggy == NULL)
 	{
 		return (NULL);
 	}
@@ -26,63 +28,27 @@ dog_t *new_dog(char *name, float age, char *owner)
 	for (cpt = 0; owner[cpt]; cpt++)
 		cptowner++;
 
-	Dog->name = malloc(cptname + 1);
-	if (Dog->name == NULL)
+	Doggy->name = malloc(cptname + 1);
+	if (Doggy->name == NULL)
 	{
-		free(Dog);
+		free(Doggy);
 		return (NULL);
 	}
 
-	Dog->owner = malloc(cptowner + 1);
-	if (Dog->owner == NULL)
+	Doggy->owner = malloc(cptowner + 1);
+	if (Doggy->owner == NULL)
 	{
-		free(Dog->name);
-		free(Dog);
+		free(Doggy->name);
+		free(Doggy);
 		return (NULL);
 	}
 
 	for (cpt = 0; cpt <= cptname; cpt++)
-		Dog->name[cpt] = name[cpt];
+		Doggy->name[cpt] = name[cpt];
 
-	Dog->age = age;
+	Doggy->age = age;
 
 	for (cpt = 0; cpt <= cptowner; cpt++)
-		Dog->owner[cpt] = owner[cpt];
-	return (Dog);
+		Doggy->owner[cpt] = owner[cpt];
+	return (Doggy);
 }
-
-/**
- * _strdup - copy string
- * @str: string duplicate
- * Return: 0 or NULL
- */
-
-char *_strdup(char *str)
-{
-	char *t;
-	int i = 0;
-	int l;
-
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	for (l = 0; str[l] != '\0'; l++)
-	{
-	}
-	l++;
-
-	t = malloc(sizeof(char) * l);
-
-	if (t == 0)
-	{
-		return (NULL);
-	}
-	while (str[i] != '\0')
-	{
-		t[i] = str[i];
-		i++;
-	}
-	return (t);
-}
-~
