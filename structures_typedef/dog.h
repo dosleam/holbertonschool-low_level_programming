@@ -2,7 +2,6 @@
 #define DOG_H
 #include <stdio.h>
 #include <stdlib.h>
-#include "1-strdup.c"
 
 /**
  * struct dog - create a dog
@@ -12,12 +11,16 @@
  * description: information of a dog
  */
 
-typedef struct dog
+struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-} dog_t;
+};
+
+typedef struct dog dog_t;
+
+
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
