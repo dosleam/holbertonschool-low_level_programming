@@ -1,0 +1,19 @@
+#ifndef DOG.H
+#define DOG.H
+#include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * struct dog - create a dog
+ * @name: name a dog
+ * @age: age of dog
+ * @owner: owner a dog
+ * description: information of a dog
+ */
+
+struct dog
+{
+	char *name;
+	float age;
+	char *owner;
+};
