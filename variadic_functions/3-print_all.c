@@ -8,40 +8,40 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list list; /* Déclare une variable pour contenir la liste des arguments*/
-	int i = 0; /* Initialise une variable d'index pour la chaîne de format */
-	char *str; /* Déclare un pointeur pour contenir les arguments de typ chaine */
-	const char *separator = ""; /* Initialise une chaîne pour utiliser comme sépareur */
+	va_list list;
+	int i = 0;
+	char *str;
+	const char *separator = "";
 
-	va_start(list, format); /* Initialise la liste des arguments variables */
+	va_start(list, format);
 
-	while (format && format[i]) /* Boucle a travers chaque caractère de la cine de format*/
+	while (format && format[i])
 	{
 		if (format[i] == 'c' || format[i] == 'i' ||
-				format[i] == 'f' || format[i] == 's') /* Vérifie si le caractère actuel du form est un spécificateur de type valide */
+				format[i] == 'f' || format[i] == 's')
 		{
-			printf("%s", separator); /* Imprime le séparateur avant l'argument */
+			printf("%s", separator);
 
-			if (format[i] == 'c') /* Traite les différents types d'arguments en fonction du carace�re de format */
-				printf("%c", va_arg(list, int)); /* Imprime un argument de type caractère */
+			if (format[i] == 'c')
+				printf("%c", va_arg(list, int));
 			else if (format[i] == 'i')
-				printf("%d", va_arg(list, int)); /* Imprime un argument de type entier */
+				printf("%d", va_arg(list, int));
 			else if (format[i] == 'f')
-				printf("%f", va_arg(list, double)); /* Imprime un argument de type flottant */
+				printf("%f", va_arg(list, double));
 			else if (format[i] == 's')
 			{
-				str = va_arg(list, char *); /* Récupère l'argument de type chaîne */
+				str = va_arg(list, char *);
 				if (str == NULL)
-					printf("(nil)"); /* Imprime (nil) si la chaîne est NULL */
+					printf("(nil)");
 				else
-					printf("%s", str); /* Imprime l'argument de type chaîne */
+					printf("%s", str);
 			}
 
 			separator = ", ";
 		}
 
-		i++; /* Passe au caractère suivant dans la chaîne de format */
+		i++;
 	}
-	printf("\n"); /* Imprime un retour a la lign a la fin de la stie */
-	va_end(list); /* Nettoie la liste des arguments variables */
+	printf("\n");
+	va_end(list);
 }
