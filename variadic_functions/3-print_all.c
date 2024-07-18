@@ -37,7 +37,7 @@ void print_all(const char * const format, ...)
 					printf("%s", str); /* Imprime l'argument de type chaîne */
 			}
 
-			separator = ", "; /* Met a jour le séparateur à ", " après le premier argument */
+			separator = ", ";
 		}
 
 		i++; /* Passe au caractère suivant dans la chaîne de format */
