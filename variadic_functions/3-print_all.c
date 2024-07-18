@@ -4,14 +4,6 @@
  * print_all - print anything
  * @format: a list of types of arguments passed to the function
  * @...: the variable arguments to be printed
- *
- * Description: This function prints arguments of various types based on the
- * format string passed to it. Supported types are:
- * c: char
- * i: integer
- * f: float
- * s: char* (if the string is NULL, print (nil) instead)
- * Any other character in the format string is ignored.
  */
 
 void print_all(const char * const format, ...)
