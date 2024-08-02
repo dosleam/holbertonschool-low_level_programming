@@ -10,6 +10,7 @@ void copy_file(const char *src, const char *dest)
 {
 	int from, file_to, cp;
 	char buff[1024];
+	mode_t old_umask;
 
 	from = open(src, O_RDONLY);
 	if (from == -1)
@@ -18,12 +19,17 @@ void copy_file(const char *src, const char *dest)
 		exit(98);
 	}
 
+	old_umask = umask(0000);
+
 	file_to = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 		exit(99);
 	}
+
+	umask(old_umask);
+
 	while ((cp = read(from, buff, 1024)) > 0)
 	{
 		if (write(file_to, buff, cp) != cp)
@@ -46,11 +52,6 @@ void copy_file(const char *src, const char *dest)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);
-	}
-	if (chmod(dest, 0664) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't change permissions for %s\n", dest);
-		exit(101);
 	}
 }
 
