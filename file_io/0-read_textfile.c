@@ -12,7 +12,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd;
 	ssize_t bytesRead, bytesWritten;
 	char *buffer;
-	
+
 	if (filename == NULL)
 		return (0);
 	/* Ouverture du fichier */
@@ -45,6 +45,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	/* Nettoyage */
 	free(buffer);
 	close(fd);
-	
 	return (bytesWritten);
 }
