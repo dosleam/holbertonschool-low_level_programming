@@ -17,6 +17,7 @@ void copy_file(const char *src, const char *dest)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
+
 	file_to = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
@@ -45,6 +46,11 @@ void copy_file(const char *src, const char *dest)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to);
 		exit(100);
+	}
+	if (chmod(dest, 0664) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't change permissions for %s\n", dest);
+		exit(101);
 	}
 }
 
