@@ -23,6 +23,7 @@ void copy_file(const char *src, const char *dest)
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
+		umask(old_umask);
 		exit(99);
 	}
 	umask(old_umask);
