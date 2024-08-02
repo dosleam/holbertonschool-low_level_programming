@@ -35,13 +35,13 @@ void copy_file(const char *file_from, const char *file_to)
 	ssize_t n_read, n_written;
 	char buffer[BUFFER_SIZE];
 
-	fd_from = open(file_from, O_RDONLY, 0664);
+	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
 	{
 		error_exit("Error: Can't read from file %s\n", file_from, 98);
 	}
 	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC,
-			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
+			S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH, 0664);
 	if (fd_to == -1)
 	{
 		close_file(fd_from);
