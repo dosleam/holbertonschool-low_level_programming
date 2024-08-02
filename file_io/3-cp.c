@@ -35,7 +35,7 @@ void copy_file(const char *file_from, const char *file_to)
 	ssize_t n_read, n_written;
 	char buffer[BUFFER_SIZE];
 
-	fd_from = open(file_from, O_RDONLY);
+	fd_from = open(file_from, O_RDONLY, 0664);
 	if (fd_from == -1)
 	{
 		error_exit("Error: Can't read from file %s\n", file_from, 98);
