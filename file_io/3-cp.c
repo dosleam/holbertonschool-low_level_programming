@@ -2,10 +2,10 @@
 #define BUFFER_SIZE 1024
 
 /**
- * error_exit - Prints an error message and exits the program.
- * @message: The error message to be printed.
- * @filename: The filename to include in the error message.
- * @exit_code: The exit code for the program.
+ * error_exit - Prints an error message and exits the program
+ * @message: The error message to be printed
+ * @filename: The filename to include in the error message
+ * @exit_code: The exit code for the program
  */
 void error_exit(const char *message, const char *filename, int exit_code)
 {
