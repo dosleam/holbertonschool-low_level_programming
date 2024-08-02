@@ -18,18 +18,14 @@ void copy_file(const char *src, const char *dest)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 		exit(98);
 	}
-
 	old_umask = umask(0000);
-
 	file_to = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 		exit(99);
 	}
-
 	umask(old_umask);
-
 	while ((cp = read(from, buff, 1024)) > 0)
 	{
 		if (write(file_to, buff, cp) != cp)
